@@ -11,10 +11,14 @@
             "id": "c013eae58ca75fe8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "3-资源/工具收藏/Obsidian邪修用法完整导出.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Obsidian邪修用法完整导出"
             }
           }
         ]
@@ -108,6 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "3-资源/工具收藏/索引.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -126,6 +131,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "3-资源/工具收藏/索引.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -139,6 +145,7 @@
         "state": {
           "type": "outline",
           "state": {
+            "file": "3-资源/工具收藏/索引.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -162,5 +169,21 @@
     }
   },
   "active": "c013eae58ca75fe8",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "GitHub-Obsidian笔记管理工具汇总.md",
+    "Obsidian进阶用法总结.md",
+    "3-资源/工具收藏/Obsidian邪修用法完整导出.md",
+    "README.md",
+    "3-资源/工具收藏/GitHub-Obsidian笔记管理工具汇总.md",
+    "3-资源/工具收藏/Obsidian进阶用法总结.md",
+    "3-资源/专升本/大学英语",
+    "3-资源/专升本/酒店管理",
+    "3-资源/工具收藏/索引.md",
+    "3-资源/工具收藏/笔记同步助手-微信存进Obsidian.md",
+    "3-资源/每日热榜",
+    "3-资源/专升本",
+    "3-资源/酒店英语",
+    "3-资源/工具收藏",
+    "3-资源"
+  ]
 }
