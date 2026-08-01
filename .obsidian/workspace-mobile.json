@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-资源/工具收藏/Obsidian邪修用法完整导出.md",
+                "file": "1-资源/工具收藏/Obsidian邪修用法完整导出.md",
                 "mode": "source",
                 "source": false
               },
@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "3-资源/工具收藏/索引.md",
+            "file": "3-资源/工具收藏/Obsidian邪修用法完整导出.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -168,11 +168,11 @@
       "bases:新建数据库": false
     }
   },
-  "active": "c013eae58ca75fe8",
+  "active": "7367afd302884248",
   "lastOpenFiles": [
     "GitHub-Obsidian笔记管理工具汇总.md",
     "Obsidian进阶用法总结.md",
-    "3-资源/工具收藏/Obsidian邪修用法完整导出.md",
+    "1-资源/工具收藏/Obsidian邪修用法完整导出.md",
     "README.md",
     "3-资源/工具收藏/GitHub-Obsidian笔记管理工具汇总.md",
     "3-资源/工具收藏/Obsidian进阶用法总结.md",
@@ -183,7 +183,7 @@
     "3-资源/每日热榜",
     "3-资源/专升本",
     "3-资源/酒店英语",
-    "3-资源/工具收藏",
-    "3-资源"
+    "1-资源/工具收藏",
+    "1-资源"
   ]
 }
