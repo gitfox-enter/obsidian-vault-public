@@ -1,55 +1,79 @@
-# 日志本 · 公开版
+# 日志本 · 公开模板
 
-> 一个 Obsidian 笔记仓库的公开展示。
-> 原始教程来自 B站 UP主「爬爬虾」，本仓库参照其笔记体系搭建。
+> 一个基于 Obsidian + PARA + GitHub 的笔记仓库模板。
+> 原始教程来自 **B站「爬爬虾」**，本仓库参照其笔记体系搭建。
+> 
+> **这不是用来 fork 的，是用来 clone 的。** 复制到你自己的 GitHub，然后改成你自己的笔记仓库。
 
 ---
 
-## 📌 视频教程来源
+## 📌 视频教程
 
 | 来源 | 链接 |
 |------|------|
 | B站 UP主 | **爬爬虾** |
-| Obsidian 邪修用法系列 | [B站搜索「爬爬虾 Obsidian」](https://search.bilibili.com/all?keyword=%E7%88%AC%E7%88%AC%E8%9B%BE%20Obsidian) |
+| Obsidian 邪修用法 | [B站搜索「爬爬虾 Obsidian」](https://search.bilibili.com/all?keyword=%E7%88%AC%E7%88%AC%E8%9B%BE%20Obsidian) |
 
-本笔记仓库的搭建思路（PARA 体系、Obsidian Git 同步、图片管理规范、工具链选型等）均参考自爬爬虾的 Obsidian 教学视频。
+本仓库的笔记体系（PARA 目录结构、Obsidian Git 同步方案、图片管理规范等）均参考自爬爬虾的教学视频。
+
+---
+
+## 🚀 快速上手（3 步）
+
+### 第 1 步：克隆到本地
+
+```bash
+git clone https://github.com/gitfox-enter/obsidian-vault-public.git my-obsidian-vault
+cd my-obsidian-vault
+```
+
+### 第 2 步：创建你自己的 GitHub 仓库
+
+1. 登录你的 GitHub 账号
+2. 新建一个仓库，仓库名随便（比如 `my-vault`），**不要** 勾选任何模板文件
+3. 创建后，你会看到类似这样的地址：
+   ```
+   https://github.com/你的用户名/my-vault.git
+   ```
+
+### 第 3 步：关联到你自己的仓库并推送
+
+```bash
+# 把 remote 从我的改成你的
+git remote set-url origin https://github.com/你的用户名/my-vault.git
+
+# 推送过去
+git add -A
+git commit -m "init"
+git push -u origin main
+```
+
+### 第 4 步：在 Obsidian 里打开
+
+1. 打开 Obsidian
+2. **打开已有仓库** → 选择你刚 clone 的 `my-obsidian-vault` 文件夹
+3. 安装插件：**Obsidian Git**（核心）+ **Custom Attachment Location**（图片管理）
+4. 在 Obsidian Git 设置里，填上你刚才创建的 GitHub 仓库地址，设置自动同步
+
+> 现在这个仓库就是你的了，可以开始往里写笔记。
 
 ---
 
 ## 📁 笔记体系（PARA）
 
-基于 Tiago Forte 的 PARA 方法，结构如下：
+本仓库基于 Tiago Forte 的 PARA 方法，结构如下：
 
-### 📥 0-收件箱
-随手记的碎片想法，定期整理，不做判断先放进来。
+| 目录 | 用途 | 新建方法 |
+|------|------|----------|
+| `0-收件箱/` | 碎片想法，先丢进来 | 新建笔记，写完再归类 |
+| `1-项目/` | 正在做的事，有截止日期 | 复制 `5-模板/项目卡片.md` |
+| `2-领域/` | 长期关注的方向 | 每领域一篇笔记 |
+| `3-资源/` | 知识卡片 + 工具收藏 | 复制 `5-模板/知识卡片.md` |
+| `4-归档/` | 做完的旧项目 | 从 1-项目 移动过来 |
+| `5-模板/` | 新建笔记时的模板 | 别动它，用来复制 |
 
-### 🎯 1-项目
-正在做的具体项目，有明确目标和截止日期。
-- 每个项目一个文件夹或一篇笔记
-- 项目完成后移入 4-归档
-
-### 🔭 2-领域
-长期关注的方向，没有截止日期但持续积累。
-- 学习领域（语言、技能、知识体系）
-- 兴趣爱好（长期沉淀的内容）
-
-### 📚 3-资源
-知识卡片和工具收藏。
-- 知识卡片：一个概念/知识点一篇笔记
-- 工具收藏：软件的用法、配置、踩坑记录
-
-### 🗃️ 4-归档
-做完的旧项目，不再活跃但需要保留。
-
-### 📋 5-模板
-新建笔记时复制的模板。
-- **项目卡片** — 创建新项目时复制
-- **知识卡片** — 记录新知识点时复制
-- **每日笔记** — 每天写日记时复制
-- **工具评测** — 尝试新工具时复制
-
-### 📅 每日笔记 / 周期性笔记
-每天的日记，记录最重要的 3 件事。按 YYYY-MM-DD 命名。
+**每天写日记**：
+- 用 Obsidian 内置的「每日笔记」插件，自动生成 `每日笔记/2026-08-01.md`
 
 ---
 
@@ -57,43 +81,51 @@
 
 | 组件 | 工具 | 用途 |
 |------|------|------|
-| 笔记软件 | **Obsidian** | 核心编辑器 |
-| 同步方案 | **Obsidian Git** + GitHub | 多设备同步，版本管理 |
-| 图片管理 | **Custom Attachment Location** | 自动按笔记名分目录存图 |
-| 云同步 | **GitHub 私有仓库** | 免费、可回溯、不怕丢 |
-| 微信同步 | **笔记同步助手** | 微信内容→Obsidian |
-| 知识管理 | **PARA + GTD + 知识卡片** | 笔记体系 + 任务管理 |
+| 笔记软件 | **Obsidian** | 核心编辑器，跨平台 |
+| 同步方案 | **Obsidian Git** | 自动同步到 GitHub，免费、版本可回溯 |
+| 图片管理 | **Custom Attachment Location** | 附件自动按笔记名分目录存放 |
+| 微信同步 | **笔记同步助手** | 微信内容一键存进 Obsidian |
+
+### 必须安装的插件
+
+| 插件 | 安装方式 | 配置要点 |
+|------|----------|----------|
+| **Obsidian Git** | 社区插件搜索安装 | 设置 GitHub remote 地址，开启自动同步 |
+| **Custom Attachment Location** | 社区插件搜索安装 | 路径格式：`assets/${noteFileName}/${generatedAttachmentFileName}` |
 
 ---
 
-## 🛠️ 已安装的插件
+## 🛠️ 日常使用
 
-| 插件 | 类型 | 说明 |
-|------|------|------|
-| Obsidian Git | 社区 | 自动同步到 GitHub |
-| Custom Attachment Location | 社区 | 自定义附件存放路径 |
+### 新建一篇知识笔记
+1. 打开 `5-模板/知识卡片.md`
+2. 复制一份到 `3-资源/` 下对应文件夹
+3. 改标题和内容
 
----
+### 新建一个项目
+1. 打开 `5-模板/项目卡片.md`
+2. 复制一份到 `1-项目/`
+3. 填写项目信息
 
-## 📦 本仓库包含的笔记
+### 记录碎片想法
+1. 直接新建笔记到 `0-收件箱/`
+2. 周末整理，归类到 1-项目 或 3-资源
 
-### 工具收藏（公开版展示内容）
-- [[Obsidian进阶用法总结]] — PARA + GTD + 知识卡片的笔记体系整理
-- [[Obsidian邪修用法完整导出]] — B站爬爬虾教程的原始导出
-- [[GitHub-Obsidian笔记管理工具汇总]] — 值得关注的 GitHub Obsidian 工具
-- [[笔记同步助手-微信存进Obsidian]] — 微信内容一键存进 Obsidian 的方案
+### 同步到手机
+1. 在手机端 Obsidian 里 clone 你 GitHub 上的仓库
+2. 安装 Obsidian Git 插件，配置自动同步
+3. 写完自动推 GitHub，电脑端也能看到
 
 ---
 
 ## 🔗 相关链接
 
-- B站爬爬虾：[B站搜索「爬爬虾 Obsidian」](https://search.bilibili.com/all?keyword=%E7%88%AC%E7%88%AC%E8%9B%BE%20Obsidian)
+- 爬爬虾 Obsidian 教程：[B站搜索](https://search.bilibili.com/all?keyword=%E7%88%AC%E7%88%AC%E8%9B%BE%20Obsidian)
 - Obsidian 官网：[obsidian.md](https://obsidian.md)
-- GitHub Obsidian 工具汇总：[GitHub 搜索 obsidian](https://github.com/search?q=obsidian+vault+template)
+- PARA 方法：[fortelabs.com/para](https://fortelabs.com/para)
+- GitHub 免费仓库：[github.com](https://github.com)
 - 笔记同步助手：[wechatobsidian.com](https://wechatobsidian.com/)
-- Tiago Forte PARA 方法：[fortelabs.com/para](https://fortelabs.com/para)
 
 ---
 
-> 本仓库是公开展示版，不包含个人隐私笔记。
-> 完整笔记在私有仓库，同步由 Obsidian Git 自动完成。
+> 有问题？先看看爬爬虾的教程，大部分问题都能解决。
