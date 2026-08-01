@@ -1,0 +1,13 @@
+# Obsidian internal files（不纳入 Git，避免多设备冲突）
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/app.json
+.obsidian/obsidian-vault-config.txt
+
+# OS 垃圾文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*~
